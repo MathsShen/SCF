@@ -27,27 +27,11 @@ class KLDiracVMF(nn.Module):
         l1 = -kappa * cos_theta
         l2 = - (d/2-1) * torch.log(1e-6 + kappa)
         l3 = log_iv_kappa * 1.0
-        """
-        losses = - kappa * cos_theta \
-                 - (d/2-1) * torch.log(1e-6 + kappa) \
-                 + log_iv_kappa \
-                 + (d/2) * math.log(2*math.pi) \
-                 + d * math.log(r)
-        """
+
         losses = l1 + l2 + l3 \
                 + (d/2) * math.log(2*math.pi) \
                 + d * math.log(r)
 
-        """
-        # minimizing the upper bound
-        cos_theta = torch.sum(mu * wc, dim=1) / r
-        dis = 2 - 2 * cos_theta
-        losses = kappa * dis \
-                 - (d/2-1) * torch.log(1e-6 + kappa) \
-                 + log_iv_kappa \
-                 + (d/2) * math.log(2*math.pi) \
-                 + d * math.log(r)
-        """
         return losses, l1, l2, l3
 
 

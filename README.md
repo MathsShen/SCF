@@ -11,7 +11,26 @@ This repository contains the PyTorch implementation of Sphere Confidence Face (S
 ## Getting Started
 ### Training
 ``` bash
-bash train.sh
+python ../lib/train.py \
+    --dataset "ms1m" \
+    --seed 777 \
+    --gpu_ids [GPU_IDS] \
+    --batch_size 1024 \
+    --output_dir [OUTPUT_DIR] \
+    --saved_bkb [PATH_BACKBONE_CKPT] \
+    --saved_fc [PATH_FC_CKPT] \
+    --num_workers 8 \
+    --epochs 30 \
+    --lr 3e-5 \
+    --lr_scheduler "StepLR" \
+    --step_size 2 \
+    --gamma 0.5 \
+    --convf_dim 25088 \
+    --z_dim 512 \
+    --radius 64 \
+    --max_grad_clip 0 \
+    --max_grad_norm 0 \
+    --tensorboard
 ```
 
 ### Test

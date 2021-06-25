@@ -11,7 +11,7 @@ This repository contains the PyTorch implementation of Sphere Confidence Face (S
 ## Getting Started
 ### Training
 ``` bash
-python ../lib/train.py \
+python train.py \
     --dataset "ms1m" \
     --seed 777 \
     --gpu_ids [GPU_IDS] \

@@ -13,6 +13,9 @@ This repository contains the PyTorch implementation of Sphere Confidence Face (S
 
 ## Getting Started
 ### Training
+1. Train ResNet100 imported from backbone.py as the deterministic backbone using [ArcFace](https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch) loss.
+2. Train SCF based on the pretrained backbone by specifying GPU_IDS, OUTPUT_DIR, PATH_BACKBONE_CKPT(the path of the pretrained backbone checkpoint) and PATH_FC_CKPT(the path of the pretrained fc-layer checkpoint) and running:
+
 ``` bash
 python train.py \
     --dataset "ms1m" \

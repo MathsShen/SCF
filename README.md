@@ -13,7 +13,7 @@ This repository contains the PyTorch implementation of Sphere Confidence Face (S
 
 ## Getting Started
 ### Training
-1. Train ResNet100 imported from backbone.py as the deterministic backbone using [ArcFace](https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch) loss.
+1. Train ResNet100 imported from backbones.py as the deterministic backbone using [ArcFace](https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch) loss.
 2. Train SCF based on the pretrained backbone by specifying GPU_IDS, OUTPUT_DIR, PATH_BACKBONE_CKPT(the path of the pretrained backbone checkpoint) and PATH_FC_CKPT(the path of the pretrained fc-layer checkpoint) and running:
 
 ``` bash
@@ -41,6 +41,9 @@ python train.py \
 
 ### Test
 
+IJB benchmark: use $\kappa$ as confidence score for each face image to aggregate representations as in Eqn (14). Refer to [the standard IJB benchmark](https://github.com/deepinsight/insightface/tree/master/recognition/_evaluation_/ijb) for implementation.
+
+1v1 verification benchmark: use Eqn (13) as the similarity score.
 
 ## Other Implementations
 SCF in TFace: [SCF](https://github.com/Tencent/TFace/tree/master/tasks/scf)

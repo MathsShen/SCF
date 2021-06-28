@@ -3,7 +3,7 @@
 This repository contains the PyTorch implementation of Sphere Confidence Face (SCF) proposed in the CVPR2021 paper: [Spherical Confidence Learning for Face Recognition](https://openaccess.thecvf.com/content/CVPR2021/papers/Li_Spherical_Confidence_Learning_for_Face_Recognition_CVPR_2021_paper.pdf) with [Appendices](https://openaccess.thecvf.com/content/CVPR2021/supplemental/Li_Spherical_Confidence_Learning_CVPR_2021_supplemental.pdf).
 
 <p align="center">
-   <img src="scf_illustr.png" title="roc" width="500" />
+   <img src="scf_illustr.png" title="roc" width="850" />
 </p>
 
 ## Main Results

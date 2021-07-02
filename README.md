@@ -49,7 +49,7 @@ python train.py \
 IJB benchmark: use $\kappa$ as confidence score for each face image to aggregate representations as in Eqn (14). Refer to [the standard IJB benchmark](https://github.com/deepinsight/insightface/tree/master/recognition/_evaluation_/ijb) for implementation.
 
 1v1 verification benchmark: use Eqn (13) as the similarity score.
-$ s(\mathbf{x}^i, \mathbf{x}^j)=\log \mathcal{C}_{d}\left(\kappa^{i}\right)+\log \mathcal{C}_{d}\left(\kappa^{j}\right)-\log \mathcal{C}_{d}(|| \kappa^i \boldsymbol{\mu}^i + \kappa^j \boldsymbol{\mu}^j||_2)-d \log r $
+$s(\mathbf{x}^i, \mathbf{x}^j)=\log \mathcal{C}_{d}\left(\kappa^{i}\right)+\log \mathcal{C}_{d}\left(\kappa^{j}\right)-\log \mathcal{C}_{d}(|| \kappa^i \boldsymbol{\mu}^i + \kappa^j \boldsymbol{\mu}^j||_2)-d \log r$
 
 ## Other Implementations
 SCF in TFace: [SCF](https://github.com/Tencent/TFace/tree/master/tasks/scf)

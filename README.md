@@ -17,8 +17,9 @@ This repository contains the PyTorch implementation of Sphere Confidence Face (S
 
 ## Getting Started
 ### Training
+Training consists of two separate steps:
 1. Train ResNet100 imported from backbones.py as the deterministic backbone using spherical loss, e.g. [ArcFace](https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch) loss.
-2. Train SCF based on the pretrained backbone by specifying [GPU_IDS], [OUTPUT_DIR], [PATH_BACKBONE_CKPT] (the path of the pretrained backbone checkpoint) and [PATH_FC_CKPT] (the path of the pretrained fc-layer checkpoint) and running:
+2. Train SCF based on the pretrained backbone by specifying the arguments including [GPU_IDS], [OUTPUT_DIR], [PATH_BACKBONE_CKPT] (the path of the pretrained backbone checkpoint) and [PATH_FC_CKPT] (the path of the pretrained fc-layer checkpoint) and then running the command:
 
 ``` bash
 python train.py \
@@ -48,6 +49,9 @@ python train.py \
 IJB benchmark: use $\kappa$ as confidence score for each face image to aggregate representations as in Eqn (14). Refer to [the standard IJB benchmark](https://github.com/deepinsight/insightface/tree/master/recognition/_evaluation_/ijb) for implementation.
 
 1v1 verification benchmark: use Eqn (13) as the similarity score.
+$$
+s(\mathbf{x}^i, \mathbf{x}^j)=\log \mathcal{C}_{d}\left(\kappa^{i}\right)+\log \mathcal{C}_{d}\left(\kappa^{j}\right)-\log \mathcal{C}_{d}(|| \kappa^i \boldsymbol{\mu}^i + \kappa^j \boldsymbol{\mu}^j||_2)-d \log r
+$$
 
 ## Other Implementations
 SCF in TFace: [SCF](https://github.com/Tencent/TFace/tree/master/tasks/scf)

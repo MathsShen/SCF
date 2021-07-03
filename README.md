@@ -6,8 +6,6 @@ This repository contains the PyTorch implementation of Sphere Confidence Face (S
    <img src="scf_illustr.png" title="roc" width="850" />
 </p>
 
-A 2D toy example of training SCF. %Each face image is thought of as a realization of a random variable $\mathbf{x}$. SCF learns a mapping from the input space $\mathcal{X}$ to an $r$-radius spherical space, $r\mathbb{S}^1 \subset \mathbb{R}^2$. The latent code of each image is assumed to obey a conditional distribution, i.e. $\mathbf{z}|\mathbf{x} \sim r\text{-vMF}\left(\boldsymbol{\mu}_{\mathbf{x}}, \kappa_{\mathbf{x}}\right)$, where $\boldsymbol{\mu}_{\mathbf{x}}$ and $\kappa_{\mathbf{x}}$ are parameterized by neural networks. Each identity has a class template $\mathbf{w}_{\mathbf{x} \in c}$ that induces a spherical Dirac delta, for $c=1,2,3$. Optimization proceeds by minimizing $D_{\mathrm{KL}} \bigl( \delta\left(\mathbf{z}-\mathbf{w}_{\mathbf{x} \in c} \bigr) \| r\text{-vMF}\left(\boldsymbol{\mu}_{\mathbf{x}}, \kappa_{\mathbf{x}}\right)\right)$. Experiments are carried out using a subset of MS1MV2 containing three identities. We find that there are \emph{mislabeled samples} for the third identity which hamper training otherwise. SCF learns to assign low confidence to such samples in an adaptive manner.
-
 ## Main Results
 |    IJB-B    | ResNet100 1e-5 | ResNet100 1e-4  |    IJB-C    | ResNet100 1e-5 | ResNet100 1e-4  |
 | :------------: | :--------------: | :------: | :------------: | :--------------: | :------: |

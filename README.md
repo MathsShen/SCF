@@ -7,7 +7,18 @@ This repository contains the PyTorch implementation of Sphere Confidence Face (S
 </p>
 
 ## Main Results
-...
+|    IJB-B    | ResNet100 1e-5 | ResNet100 1e-4  |    IJB-C    | ResNet100 1e-5 | ResNet100 1e-4  |
+| :------------: | :--------------: | :------: | :------------: | :--------------: | :------: |
+| CosFace |       89.81       | 94.59  | CosFace |       93.86       | 95.95  |
+| + PFE-G |       89.96       | 94.64  | + PFE-G |       94.09       | 96.04  |
+| + PFE-v  |      N/A       |  N/A  |  + PFE-v  |      N/A       |  N/A  |
+| + SCF-G  |       89.97       | 94.56  |  + SCF-G  |       94.15       | 96.02  |
+| + **SCF**     |       91.02      | 94.95  |  + **SCF**     |       94.78     | 96.22  |
+| ArcFace |       89.33       | 94.20  | ArcFace |       93.15       | 95.60  |
+| + PFE-G |       89.55       | 94.30  |  + PFE-G |       92.95       | 95.32 |
+| + PFE-v  |      N/A       |  N/A  |  + PFE-v  |      N/A       |  N/A  |
+| + SCF-G  |       89.52       | 94.24  |  + SCF-G  |       93.85       | 95.33  |
+| + **SCF**     |       90.68      | 94.74  |  + **SCF**     |       94.04      | 96.09  |
 
 ## Requirements
 * python==3.6.0

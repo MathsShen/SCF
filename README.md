@@ -6,7 +6,7 @@ This repository contains the PyTorch implementation of Sphere Confidence Face (S
    <img src="scf_illustr.png" title="roc" width="850" />
 </p>
 
-## Main Results
+## Empirical Results
 |    IJB-B    | ResNet100 1e-5 | ResNet100 1e-4  |    IJB-C    | ResNet100 1e-5 | ResNet100 1e-4  |
 | :------------: | :--------------: | :------: | :------------: | :--------------: | :------: |
 | CosFace |       89.81       | 94.59  | CosFace |       93.86       | 95.95  |
